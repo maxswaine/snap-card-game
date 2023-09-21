@@ -1,5 +1,5 @@
 package Snap;
 
 public enum CardSorting {
-    BY_SUIT, BY_NUMBER
+    BY_SUIT, BY_NUMBER, SHUFFLE;
 }
