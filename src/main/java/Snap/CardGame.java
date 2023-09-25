@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
-public class CardGame {
+public abstract class CardGame {
     protected List<Card> deckOfCards = new ArrayList<>();
     protected String name;
     public CardGame() {
@@ -33,6 +33,11 @@ public class CardGame {
         }
     }
 
+    public void printAllCards() {
+        for (Card card : deckOfCards) {
+            System.out.println(card);
+        }
+    }
     public List<Card> getDeckOfCards() {
         return (List<Card>) deckOfCards;
     }
@@ -49,9 +54,6 @@ public class CardGame {
         this.name = name;
     }
 
-    public Optional<Card> dealCard() {
-        return deckOfCards.stream().findFirst();
-    }
 
 
     public void sortDeck(CardSorting cardSorting) {
@@ -66,6 +68,5 @@ public class CardGame {
                 Collections.shuffle(deckOfCards);
                 break;
         }
-        deckOfCards.forEach(System.out::println);
     }
 }

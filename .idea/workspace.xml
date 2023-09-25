@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a918cfbb-0434-4898-a915-f65f047736e4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Commands/CommandRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Commands/CommandType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a918cfbb-0434-4898-a915-f65f047736e4" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Snap/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/CommandRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/CommandRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Snap/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Snap/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Snap/CardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Snap/CardGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Snap/CardSorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Snap/CardSorting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Snap/Snap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Snap/Snap.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -47,9 +46,17 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/admin/Documents/development/projects/snap-card-game",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -59,6 +66,15 @@
       <option name="presentableId" value="Default" />
       <updated>1695225370602</updated>
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1695295742945</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695295742945</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -83,5 +99,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
 </project>
