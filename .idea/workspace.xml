@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a918cfbb-0434-4898-a915-f65f047736e4" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Snap/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Snap/ComputerPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Commands/CommandRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/CommandRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Snap/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Snap/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Snap/CardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Snap/CardGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Snap/HumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Snap/HumanPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Snap/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Snap/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Snap/Snap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Snap/Snap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Snap/SnapPlayerActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Snap/SnapPlayerActions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -40,18 +42,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/admin/Documents/development/projects/snap-card-game",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/admin/Documents/development/projects/snap-card-game&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />

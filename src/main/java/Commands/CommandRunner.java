@@ -7,8 +7,7 @@ import java.util.Scanner;
 public class CommandRunner {
     private Scanner scanner = new Scanner(System.in);
     private String name;
-    private final String[] introCommands = new String[]{"Read the rules", "Play against a computer", "Play against a friend"};
-
+    private final String[] introCommands = new String[]{"Read the rules", "Play against a computer", "Play against a friend", "Quit"};
 
     public void runCommands() {
         intro();
@@ -35,6 +34,9 @@ public class CommandRunner {
             case 3:
                 playAgainstFriend();
                 break;
+            case 4:
+                System.out.println("Thanks for playing!");
+                break;
         }
     }
 
@@ -49,9 +51,10 @@ public class CommandRunner {
 
     public static void playAgainstFriend(){
         Snap game = new Snap();
-        game.run();
+        game.runAgainstPlayer();
     }
     public static void playAgainstComputer(){
-        System.out.println("In development");
+        Snap game = new Snap();
+        game.runAgainstComputer();
     }
 }

@@ -8,6 +8,15 @@ import java.util.Optional;
 public abstract class Player {
     private List<Card> deck;
     private String name;
+    private int index;
+
+    public int getIndex() {
+        return index;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
+    }
 
     public Player(List<Card> deck, String name) {
         this.deck = deck;
@@ -16,10 +25,6 @@ public abstract class Player {
 
     public List<Card> getDeck() {
         return deck;
-    }
-
-    public void setDeck(List<Card> deck) {
-        this.deck = deck;
     }
 
     public String getName() {
