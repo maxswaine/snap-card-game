@@ -9,6 +9,7 @@ public abstract class Player {
     private List<Card> deck;
     private String name;
     private int index;
+    private int gamesWon;
 
     public int getGamesWon() {
         return gamesWon;
@@ -18,7 +19,6 @@ public abstract class Player {
         this.gamesWon = gamesWon;
     }
 
-    private int gamesWon;
 
     public int getIndex() {
         return index;
@@ -33,16 +33,8 @@ public abstract class Player {
         this.name = name;
     }
 
-    public List<Card> getDeck() {
-        return deck;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public Optional<Card> dealCard(int index) {

@@ -4,8 +4,6 @@ public class Card{
     protected String suit;
     protected String symbol;
     protected int value;
-    String WHITE_BG = "";
-    String DEFAULT = "\u001B[0m";
 
     public Card(String suit, String symbol, int value) {
         this.suit = suit;
@@ -25,7 +23,7 @@ public class Card{
         switch (this.symbol) {
             case "2":
                 return  " -------------\n" +
-                        "|2" + this.suit + "           "+ DEFAULT+"|\n" +
+                        "|2" + this.suit + "           |\n" +
                         "|   -------   |\n" +
                         "|  |       |  |\n" +
                         "|  |   " + this.suit + "   |  |\n" +
@@ -167,7 +165,7 @@ public class Card{
                         " -------------";
             case "A":
                 return " -------------\n" +
-                        "|A" + this.suit + "           "+ DEFAULT+"|\n" +
+                        "|A" + this.suit + "           |\n" +
                         "|   -------   |\n" +
                         "|  |       |  |\n" +
                         "|  |       |  |\n" +

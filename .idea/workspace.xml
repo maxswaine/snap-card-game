@@ -6,13 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a918cfbb-0434-4898-a915-f65f047736e4" name="Changes" comment="initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/CommandRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Commands/CommandRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Commands/CommandType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Snap/ComputerPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Snap/ComputerPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Snap/HumanPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Snap/HumanPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Snap/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Snap/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Snap/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Snap/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Snap/Snap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Snap/Snap.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
