@@ -20,26 +20,29 @@ public class CommandRunner {
         System.out.println("Please choose one of the options below");
     }
     public void chooseCommands(){
-        for (int i = 0; i < introCommands.length; i++) {
-            System.out.println((i + 1) + ": " + introCommands[i]);
-        }
-        int choice = scanner.nextInt();
-        switch (choice){
-            case 1:
-                printRules();
-                break;
-            case 2:
-                playAgainstComputer();
-                break;
-            case 3:
-                playAgainstFriend();
-                break;
-            case 4:
-                System.out.println("Thanks for playing!");
-                break;
-        }
+        boolean quit = false;
+        do {
+            for (int i = 0; i < introCommands.length; i++) {
+                System.out.println((i + 1) + ": " + introCommands[i]);
+            }
+            int choice = scanner.nextInt();
+            switch (choice){
+                case 1:
+                    printRules();
+                    break;
+                case 2:
+                    playAgainstComputer();
+                    break;
+                case 3:
+                    playAgainstFriend();
+                    break;
+                case 4:
+                    System.out.println("Thanks for playing!");
+                    quit = true;
+                    break;
+            }
+        } while (!quit);
     }
-
     public void printRules(){
         System.out.println("Snap rules:");
         System.out.println("The rules of the game are pretty easy");

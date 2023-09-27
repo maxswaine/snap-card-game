@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class Snap extends CardGame {
     Scanner scanner = new Scanner(System.in);
     CommandRunner commandRunner = new CommandRunner();
+    boolean playAgain;
 
     public void doFirstTurn(Player player1, Player player2) {
         Optional<Card> player1Card = player1.dealCard(player1.getIndex());
@@ -23,73 +24,82 @@ public class Snap extends CardGame {
 }
 
     public void runAgainstComputer() {
-        sortDeck(CardSorting.SHUFFLE);
-        List<Card> userDeck = getDeckOfCards().subList(0, 25);
-        List<Card> computerDeck = getDeckOfCards().subList(26, 51);
-        HumanPlayer player1 = new HumanPlayer(userDeck, "Player 1");
-        ComputerPlayer computer = new ComputerPlayer(computerDeck, "Computer");
-
-        boolean outOfCards = false;
-
-        doFirstTurn(player1, computer);
-        player1.increaseIndex();
-        computer.increaseIndex();
-
         do {
-            if(player1.takeTurn(player1, computer)){
-                break;
-            }
-            player1.increaseIndex();
+            sortDeck(CardSorting.SHUFFLE);
 
-            if(computer.takeTurn(computer, player1)){
-                break;
-            }
-            computer.increaseIndex();
+            List<Card> userDeck = getDeckOfCards().subList(0, 25);
+            List<Card> computerDeck = getDeckOfCards().subList(26, 51);
+            HumanPlayer player1 = new HumanPlayer(userDeck, "Player 1");
+            ComputerPlayer computer = new ComputerPlayer(computerDeck, "Computer");
 
-            outOfCards = (player1.getIndex() >= userDeck.size());
-        } while (!outOfCards);
-        System.out.println("Game Over! Do you want to play again? \n(1: Yes \n 2: No)");
-        int playAgainChoice = scanner.nextInt();
-        if (playAgainChoice == 1) {
-            commandRunner.chooseCommands(); // Restart the game
-        } else {
-            System.out.println("Thank you for playing!");
-            System.exit(0); // Exit the program
+            boolean outOfCards = false;
+
+            doFirstTurn(player1, computer);
+
+            do {
+                player1.increaseIndex();
+                if (player1.takeTurn(player1, computer)) {
+                    player1.setGamesWon(player1.getGamesWon() + 1);
+                    break;
+                }
+
+                computer.increaseIndex();
+                if (computer.takeTurn(computer, player1)) {
+                    break;
+                }
+
+                outOfCards = (player1.getIndex() >= userDeck.size());
+            } while (!outOfCards);
+            System.out.println(player1.getName() + ": " + player1.getGamesWon());
+            System.out.println(computer.getName() + ": " + computer.getGamesWon());
+            playAgain = playAgain();
+        } while(playAgain);
+    }
+    public void runAgainstPlayer() {
+        do {
+            sortDeck(CardSorting.SHUFFLE);
+            List<Card> userDeck = getDeckOfCards().subList(0, 25);
+            List<Card> computerDeck = getDeckOfCards().subList(26, 51);
+            HumanPlayer player1 = new HumanPlayer(userDeck, "Player 1");
+            HumanPlayer player2 = new HumanPlayer(computerDeck, "Player 2");
+
+            boolean outOfCards = false;
+            doFirstTurn(player1, player2);
+
+            do {
+                player1.increaseIndex();
+                if (player1.takeTurn(player1, player2)) {
+                    player1.setGamesWon(player1.getGamesWon() + 1);
+                    break;
+                }
+
+                player2.increaseIndex();
+                if (player2.takeTurn(player2, player1)) {
+                    player1.setGamesWon(player2.getGamesWon() + 1);
+                    break;
+                }
+
+                outOfCards = (player1.getIndex() >= userDeck.size());
+            } while (!outOfCards);
+            System.out.println("Score:");
+            System.out.println(player1.getName() + ": " + player1.getGamesWon());
+            System.out.println(player2.getName() + ": " + player2.getGamesWon());
+            playAgain = playAgain();
+        } while(playAgain);
+    }
+    public boolean playAgain(){
+        Scanner scanner = new Scanner(System.in);
+        String choice;
+        do{
+            System.out.println("Do you want to play again? (y/n)");
+            choice = scanner.nextLine().toLowerCase();
+        } while (!choice.equals("y") && !choice.equals("n"));
+        if (choice.equals("y")){
+            System.out.println("Okay lets do it!");
+            return true;
+        } else{
+            System.out.println("Thanks for playing! See you next time");
+            return false;
         }
     }
-    public void runAgainstPlayer(){
-        sortDeck(CardSorting.SHUFFLE);
-        List<Card> userDeck = getDeckOfCards().subList(0, 25);
-        List<Card> computerDeck = getDeckOfCards().subList(26, 51);
-        HumanPlayer player1 = new HumanPlayer(userDeck, "Player 1");
-        HumanPlayer player2 = new HumanPlayer(computerDeck, "Player 2");
-
-        boolean outOfCards = false;
-        doFirstTurn(player1, player2);
-        player1.increaseIndex();
-        player2.increaseIndex();
-
-        do {
-            if(player1.takeTurn(player1, player2)){
-                break;
-            }
-            player1.increaseIndex();
-
-            if(player2.takeTurn(player2, player1)){
-                break;
-            }
-            player2.increaseIndex();
-
-            outOfCards = (player1.getIndex() >= userDeck.size());
-        } while (!outOfCards);
-        System.out.println("Game Over! Do you want to play again? (1: Yes \n 2: No)");
-        int playAgainChoice = scanner.nextInt();
-        if (playAgainChoice == 1) {
-            commandRunner.chooseCommands();
-        } else {
-            System.out.println("Thank you for playing!");
-            System.exit(0);
-        }
-    }
-
 }

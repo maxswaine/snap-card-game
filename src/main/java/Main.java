@@ -10,9 +10,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-    CommandRunner commandRunner = new CommandRunner();
+        CommandRunner commandRunner = new CommandRunner();
 
-    commandRunner.runCommands();
+        commandRunner.runCommands();
 
 
 

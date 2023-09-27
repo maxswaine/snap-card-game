@@ -5,8 +5,11 @@ import java.util.Optional;
 
 public class ComputerPlayer extends Player implements SnapPlayerActions{
     boolean gameOver = false;
+    int gamesWon = 0;
 
-
+    public void setGamesWon(int gamesWon) {
+        this.gamesWon = gamesWon;
+    }
 
     public ComputerPlayer(List<Card> deck, String name) {
         super(deck, name);
@@ -24,6 +27,8 @@ public class ComputerPlayer extends Player implements SnapPlayerActions{
             System.out.println(player2.getName() + "'s Card");
 
             if (checkMatch(playerCard.get(), opponentCard.get())) {
+                player1.setGamesWon(player1.getGamesWon() + 1);
+
                 System.out.println(getName() + " Wins!");
                 gameOver = true;
             }
